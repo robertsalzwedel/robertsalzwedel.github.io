@@ -4,40 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Climate Pie Charts</title>
+    <title>Climate Pie Charts - Gallery</title>
+    <!-- Google Fonts for consistent typography -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
     <!-- Lightbox2 CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* Three figures per row */
+            gap: 15px;
+            /* Space between figures */
+            margin-top: 20px;
+        }
+
+        .gallery a {
+            display: block;
+            /* Ensures the anchor takes full space */
+        }
+
+        .gallery img {
+            width: 100%;
+            /* Full width of the grid cell */
+            height: auto;
+            /* Maintain aspect ratio */
+            border-radius: 8px;
+            /* Optional: Rounded corners */
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <h1 class="page-header">Image Gallery</h1>
+        <h1 class="page-header">Climate Pie Charts Gallery</h1>
     </header>
 
-    <div class="gallery">
-        <a href="Test.png" data-lightbox="gallery" data-title="Image 1">
-            <img src="Test.png" alt="Image 1">
-        </a>
-        <a href="Test.png" data-lightbox="gallery" data-title="Image 2">
-            <img src="Test.png" alt="Image 2">
-        </a>
-        <a href="Test.png" data-lightbox="gallery" data-title="Image 3">
-            <img src="Test.png" alt="Image 3">
-        </a>
-        <a href="Test.png" data-lightbox="gallery" data-title="Image 3">
-            <img src="Test.png" alt="Image 3">
-        </a>
-        <a href="Test.png" data-lightbox="gallery" data-title="Image 3">
-            <img src="Test.png" alt="Image 3">
-        </a>
-        <a href="Test.png" data-lightbox="gallery" data-title="Image 3">
-            <img src="Test.png" alt="Image 3">
-        </a>
-        <a href="Test.png" data-lightbox="gallery" data-title="Image 3">
-            <img src="Test.png" alt="Image 3">
-        </a>
-        <!-- Repeat for more images -->
+    <div class="main-container">
+        <div class="left-panel">
+            <!-- Floating Menu in the Top-Right Corner -->
+            <nav class="top-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resume.html">Resumé</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <section class="main-content">
+            <!-- Gallery Container -->
+            <div class="gallery-container">
+                <div class="gallery">
+                    <a href="Test.png" data-lightbox="gallery" data-title="Image 1">
+                        <img src="Test.png" alt="Image 1">
+                    </a>
+                    <a href="Test.png" data-lightbox="gallery" data-title="Image 2">
+                        <img src="Test.png" alt="Image 2">
+                    </a>
+                    <a href="Test.png" data-lightbox="gallery" data-title="Image 3">
+                        <img src="Test.png" alt="Image 3">
+                    </a>
+                    <!-- Repeat for more images -->
+                    <a href="Test.png" data-lightbox="gallery" data-title="Image 4">
+                        <img src="Test.png" alt="Image 4">
+                    </a>
+                    <a href="Test.png" data-lightbox="gallery" data-title="Image 5">
+                        <img src="Test.png" alt="Image 5">
+                    </a>
+                    <a href="Test.png" data-lightbox="gallery" data-title="Image 6">
+                        <img src="Test.png" alt="Image 6">
+                    </a>
+                </div>
+            </div>
+        </section>
     </div>
 
     <!-- Lightbox2 JavaScript -->

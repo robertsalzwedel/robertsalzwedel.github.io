@@ -184,43 +184,86 @@ body {
 /* Page Header */
 header {
     position: absolute;
-    /* Position the header absolutely relative to the body */
     top: 0;
     left: 0;
     width: 100%;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.7);
-    /* Optional: background for visibility */
     color: white;
     z-index: 100;
-    /* Ensure it's on top of other elements */
 }
 
 .page-header {
+    font-family: 'Playfair Display', serif;
     margin: 0;
     font-size: 32px;
-    /* Adjust the font size as needed */
 }
 
-/* Gallery Container */
+/* Main Container for consistency */
+.main-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+/* Left Panel for consistency */
+.left-panel {
+    position: relative;
+    width: 40%;
+    background-color: #ffffff;
+    padding: 40px;
+}
+
+/* Top Menu for navigation consistency */
+.top-menu {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1em;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Gallery Container for the gallery */
 .gallery-container {
-    margin-top: 80px;
-    /* Add margin to push gallery below the header */
+    margin-top: 100px;
+    /* Adjust margin to avoid header overlap */
     padding: 20px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Grid Layout */
+/* Grid Layout for the gallery */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 10px;
+    gap: 15px;
+    width: 100%;
 }
 
-/* Gallery Items */
+/* Gallery Items styling */
 .gallery a {
     overflow: hidden;
     position: relative;
     display: block;
+    border-radius: 8px;
 }
 
 .gallery img {
@@ -229,6 +272,7 @@ header {
     display: block;
     transition: transform 0.3s ease;
     cursor: pointer;
+    border-radius: 8px;
 }
 
 /* Hover Effect - Enlarge Image Slightly */
