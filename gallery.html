@@ -13,18 +13,101 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
+        body {
+            background-color: #fff;
+            /* Set background to white */
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        /* Main container layout */
+        .main-container {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            /* Full height */
+            overflow: hidden;
+            /* Hide overflow */
+        }
+
+        /* Left panel styles */
+        .left-panel {
+            position: relative;
+            width: 40%;
+            /* Left panel width */
+            background-color: #ffffff;
+            /* White background for left panel */
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Top Menu aligned to the right */
+        .top-menu {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style-type: none;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.1em;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            background-color: #fff;
+            /* White background */
+            width: 100%;
+            /* Full width to cover the whole page */
+            padding: 20px;
+            /* Padding for main content */
+            flex-grow: 1;
+            /* Allow the main content to take the remaining space */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* Stack gallery vertically */
+        }
+
+        /* Gallery Container */
+        .gallery-container {
+            width: 100%;
+            padding: 20px;
+            /* Padding around the gallery */
+        }
+
+        /* Grid layout for the gallery */
         .gallery {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            /* Three figures per row */
+            /* Three images per row */
             gap: 15px;
-            /* Space between figures */
-            margin-top: 20px;
+            /* Space between images */
+            width: 100%;
         }
 
+        /* Gallery items styling */
         .gallery a {
             display: block;
-            /* Ensures the anchor takes full space */
+            /* Ensure the anchor takes full space */
+            border-radius: 8px;
+            /* Optional: Rounded corners */
+            overflow: hidden;
+            /* Hide overflow */
         }
 
         .gallery img {
@@ -32,24 +115,26 @@
             /* Full width of the grid cell */
             height: auto;
             /* Maintain aspect ratio */
-            border-radius: 8px;
-            /* Optional: Rounded corners */
+            transition: transform 0.3s ease;
+            /* Smooth transition */
+        }
+
+        /* Hover Effect - Enlarge Image Slightly */
+        .gallery a:hover img {
+            transform: scale(1.05);
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1 class="page-header">Climate Pie Charts Gallery</h1>
-    </header>
-
     <div class="main-container">
         <div class="left-panel">
             <!-- Floating Menu in the Top-Right Corner -->
             <nav class="top-menu">
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="#" id="gallery-link">Gallery</a></li>
+                    <li><a href="index.html">About</a></li>
                     <li><a href="resume.html">Resumé</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -69,7 +154,6 @@
                     <a href="Test.png" data-lightbox="gallery" data-title="Image 3">
                         <img src="Test.png" alt="Image 3">
                     </a>
-                    <!-- Repeat for more images -->
                     <a href="Test.png" data-lightbox="gallery" data-title="Image 4">
                         <img src="Test.png" alt="Image 4">
                     </a>

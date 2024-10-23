@@ -10,33 +10,6 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .fade-out {
-            animation: fadeOut 1s forwards;
-        }
-
-        @keyframes fadeOut {
-            0% {
-                background-color: #a0b6a0;
-                /* Original background */
-                transform: translateX(0);
-            }
-
-            100% {
-                background-color: #fff;
-                /* New background */
-                transform: translateX(100%);
-            }
-        }
-
-        .nav-links li {
-            transition: transform 1s;
-        }
-
-        .move-right {
-            transform: translateX(100%);
-        }
-    </style>
 </head>
 
 <body>
@@ -46,8 +19,8 @@
             <nav class="top-menu">
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#" id="gallery-link">Gallery</a></li>
                     <li><a href="index.html">About</a></li>
+                    <li><a href="index.html">Gallery</a></li>
                     <li><a href="resume.html">Resumé</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -58,6 +31,7 @@
                 <h1>Robert Salzwedel</h1>
                 <h2>Theoretical Physicist</h2>
                 <div class="contact-info">
+                    <!-- <p><strong>Phone:</strong> 123-456-7890</p> -->
                     <p><strong>Email:</strong> <a
                             href="mailto:robert.salzwedel@posteo.de">robert.salzwedel@posteo.de</a></p>
                     <p><strong>Based in:</strong> Berlin, Germany</p>
@@ -65,7 +39,9 @@
                         <a href="https://linkedin.com/in/robertsalzwedel" target="_blank"
                             rel="noopener noreferrer">LinkedIn</a> •
                         <a href="https://github.com/robertsalzwedel" target="_blank"
-                            rel="noopener noreferrer">GitHub</a>
+                            rel="noopener noreferrer">GitHub</a> <!--•
+                        <a href="https://linkedin.com/in/robertsalzwedel" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                         <a href="#">Twitter</a> -->
                     </p>
                 </div>
             </div>
@@ -76,26 +52,7 @@
         </section>
     </div>
 
-    <script>
-        document.getElementById('gallery-link').addEventListener('click', function (event) {
-            event.preventDefault(); // Prevent the default anchor click behavior
-            const leftPanel = document.querySelector('.left-panel');
-            const navLinks = document.querySelectorAll('.nav-links li');
-
-            // Add fade-out class to left panel
-            leftPanel.classList.add('fade-out');
-
-            // Move navigation links to the right
-            navLinks.forEach(link => {
-                link.classList.add('move-right');
-            });
-
-            // Redirect to gallery after the animation
-            setTimeout(() => {
-                window.location.href = 'gallery.html';
-            }, 1000); // Wait for the animation to finish before redirecting
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
