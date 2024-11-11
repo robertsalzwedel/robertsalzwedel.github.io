@@ -1,0 +1,119 @@
+/* Reset default margin and padding */
+body,
+h1,
+h2,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Use Playfair Display for headers and Open Sans for body text */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Main Container */
+.main-container {
+    width: 100%;
+    background-color: #fff;
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    /* Added padding */
+    background-color: #fff;
+    /* Ensure the background is white */
+    position: fixed;
+    /* Fix the header at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    /* Ensures the header stays on top of other content */
+}
+
+/* Home Button */
+.home-button {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.home-button a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Top Menu Styles */
+.top-menu {
+    margin-left: auto;
+    /* Pushes menu to the right */
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1em;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* Aligns content to the left */
+    padding: 100px 20px 20px;
+    /* Add top padding to push content below fixed header */
+}
+
+.welcome-message {
+    margin-bottom: 20px;
+    /* Space between welcome message and contact info */
+}
+
+.welcome-message p {
+    margin-bottom: 10px;
+    /* Space between paragraphs */
+    font-size: 1.2em;
+    /* Adjust font size for welcome message */
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+}
+
+.contact-info a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Profile Picture */
+.profile-pic {
+    width: 350px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+}
